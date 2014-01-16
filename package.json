@@ -1,13 +1,11 @@
 {
-  "name": "chat-example",
-  "version": "0.0.0",
-  "description": "A chat example to showcase how to use `socket.io` with a static `express` server",
-  "main": "server.js",
-  "repository": "",
-  "author": "Mostafa Eweda <mostafa@c9.io>",
-  "dependencies": {
-    "async": "~0.2.8",
-    "express": "~3.2.4",
-    "socket.io": "~0.9.14"
-  }
+    "name": "grouprulesbot",
+    "version": "0.0.1",
+    "description": "A GroupMe bot that automatically sends group rules to new members",
+    "main": "app.js",
+    "repository": "https://github.com/Arcanemagus/grouprulesbot",
+    "author": "Landon Abney <landonabney@gmail.com>",
+    "dependencies": {
+        "fancy-groupme-bot": "0.1.3"
+    }
 }

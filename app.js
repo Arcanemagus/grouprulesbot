@@ -14,10 +14,13 @@ if (AVATAR) {
     config.avatar_url = AVATAR;
 }
 
-var ruleBot = require('fancy-groupme-bot')(config);
+//console.log("Attempting to intialize a bot with this configuration: ", config);
+var bot = require('fancy-groupme-bot');
+var ruleBot = bot(config);
 
 ruleBot.on('botRegistered', function() {
     console.log(config.name + " is now registered");
+    ruleBot.message("I'm alive!");
 });
 
 ruleBot.on('botMessage', function(bot, message) {
@@ -29,5 +32,5 @@ ruleBot.on('botMessage', function(bot, message) {
   }
 });
 
-console.log(config.name + " is now online.");
-ruleBot.serve(8000);
+console.log("Starting server.");
+ruleBot.serve(process.env.PORT || 3000);
