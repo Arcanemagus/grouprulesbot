@@ -14,7 +14,7 @@ if (AVATAR) {
     config.avatar_url = AVATAR;
 }
 
-//console.log("Attempting to intialize a bot with this configuration: ", config);
+console.log("Attempting to intialize a bot with this configuration: ", config);
 var bot = require('fancy-groupme-bot');
 var ruleBot = bot(config);
 
