@@ -1,11 +1,12 @@
 const GROUPMETOKEN = process.env.GROUPMETOKEN;
+const NAME = process.env.NAME;
 const GROUP_ID = process.env.GROUP_ID;
 const URL = process.env.URL;
 const AVATAR = process.env.AVATAR;
 
 var config =  {
     token: GROUPMETOKEN,
-    name: "GroupRulesBot",
+    name: NAME,
     group: GROUP_ID,
     url: URL
 };
@@ -33,4 +34,4 @@ ruleBot.on('botMessage', function(bot, message) {
 });
 
 console.log("Starting server.");
-ruleBot.serve(process.env.PORT || 3000);
+ruleBot.serve(process.env.PORT || 8000);
